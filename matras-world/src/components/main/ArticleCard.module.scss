@@ -1,0 +1,25 @@
+.articleCardContainer {
+  margin-bottom: 35px;
+
+  & .articleCardImg {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px 4px #c6c6c6;
+  }
+
+  .articleTextWrapper {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
+
+    & .articleCardText {
+      font-size: 12px;
+      opacity: 0.6;
+      margin-bottom: 0;
+      text-overflow: ellipsis;
+    }
+  }
+}

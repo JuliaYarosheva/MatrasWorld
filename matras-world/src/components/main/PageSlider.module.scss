@@ -1,0 +1,24 @@
+.pageSlider {
+  border-radius: 8px;
+}
+
+.sliderItem {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 570px;
+}
+
+.sliderItemImg {
+  object-fit: cover;
+  width: inherit;
+  height: inherit;
+}
+
+.sliderItemCation {
+  position: absolute;
+  bottom: 5px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-left: 25px;
+}

@@ -1,23 +1,19 @@
 .pageFooter {
-  width: 100%;
-  background-color: #d8d8d8;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   display: flex;
   align-items: center;
-  padding: 40px 250px;
 }
 
 .logoContainer {
-  padding: 10px 60px 10px 0;
+  display: flex;
+  border-right: 1px solid #b8b8b8;
 }
 
 .footerDetailsContainer {
-  padding: 10px 0 10px 60px;
   display: flex;
   width: 100%;
   justify-content: space-between;
-  border-left: 1px solid #b8b8b8;
 }
 
 .footerDetailsTitle {
