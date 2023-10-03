@@ -30,12 +30,22 @@
   }
 }
 
-.footerDetailsTitle {
-  margin-bottom: 15px;
-}
+.footerDetailsBlock {
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-.footerDetailsItem {
-  padding: 0 0 5px;
-  font-size: 14px;
-  font-weight: 200;
+  .footerDetailsTitle {
+    margin-bottom: 15px;
+  }
+
+  .footerDetailsItem {
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: 200;
+  }
 }
