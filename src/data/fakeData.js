@@ -1,4 +1,4 @@
-export const navCategories = ["Standard", "Premium", "Luxery"];
+export const navCategories = ["Standard", "Premium", "Luxury"];
 export const navCategoryItems = [
   "Types of Matrases",
   "Width of Matrases",
