@@ -7,7 +7,7 @@ const PageSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     speed: 500,
     slidesToShow: 1,

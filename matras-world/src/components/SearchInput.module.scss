@@ -1,5 +1,13 @@
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
 .searchForm {
   position: relative;
+
+  @include media-breakpoint-down(sm) {
+    margin: 20px 50px 0;
+  }
 }
 
 .searchInput {

@@ -1,4 +1,5 @@
 import { useMatches } from "react-router-dom";
+import styles from "./Breadcrumbs.module.scss";
 
 const Breadcrumbs = () => {
   let matches = useMatches();
@@ -10,13 +11,23 @@ const Breadcrumbs = () => {
     .map((match) => match.handle.crumb(match.data));
 
   return (
-    <div className="col-6">
-      <ul className="display-flex">
-        {crumbs.map((crumb, index) => (
-          <li style={{ fontSize: 13 + "px" }} key={index}>
-            {crumb}
-          </li>
-        ))}
+    <div className="col-sm-12 col-lg-6 display-flex align-items-center">
+      <ul className={styles.breadcrumbsWrapper}>
+        {crumbs.map((crumb, index) => {
+          return (
+            <li
+              className={
+                crumbs.length > 1 && index == crumbs.length - 1
+                  ? styles.breadcrumbsItemActive
+                  : styles.breadcrumbsItem
+              }
+              key={index}
+            >
+              {index !== 0 && <span>&#32;&#47;&#32;</span>}
+              {crumb}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

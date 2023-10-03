@@ -8,14 +8,23 @@ const PageFooter = () => {
       <footer className={styles.pageFooter}>
         <div className="container">
           <div className="row">
-            <div className={styles.logoContainer + " col-3"}>
+            <div className={styles.logoContainer + " col-sm-12 col-lg-3"}>
               <Logo />
             </div>
-            <div className={styles.footerDetailsContainer + " col-8 offset-1"}>
-              <FooterDetails />
-              <FooterDetails />
-              <FooterDetails />
-              <FooterDetails />
+            <div
+              className={
+                styles.footerDetailsContainer +
+                " col-sm-12 col-lg-8 offset-sm-0 offset-lg-1"
+              }
+            >
+              <div className="container">
+                <div className="row">
+                  <FooterDetails />
+                  <FooterDetails />
+                  <FooterDetails />
+                  <FooterDetails />
+                </div>
+              </div>
             </div>
           </div>
         </div>

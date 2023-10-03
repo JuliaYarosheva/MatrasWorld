@@ -1,18 +1,24 @@
 import ArticleCard from "./ArticleCard";
 import PageSlider from "./PageSlider";
-import { asideArticleCards, articleCards } from "../../data/articles";
+import {
+  asideArticleCards,
+  articleCardsPart1,
+  articleCardsPart2,
+  imageArticles,
+} from "../../data/articles";
+import styles from "./MainContent.module.scss";
 
 const MainContent = () => {
   return (
     <main>
       <div className="site-layout--default site-layout--primary">
         <div className="container">
-          <div className="row h-25">
-            <div className="col-9">
+          <div className="row">
+            <div className="col-sm-12 col-lg-9">
               <PageSlider />
             </div>
-            <div className="col-3">
-              <ArticleCard articles={asideArticleCards} />
+            <div className="col-sm-12 col-lg-3">
+              <ArticleCard articles={asideArticleCards} type="aside" />
             </div>
           </div>
         </div>
@@ -20,13 +26,25 @@ const MainContent = () => {
       <div className="site-layout--default site-layout--primary">
         <div className="container">
           <div className="row">
-            <ArticleCard col={3} articles={articleCards} />
+            <ArticleCard col={3} articles={articleCardsPart1} type="regular" />
           </div>
         </div>
       </div>
       <div className="site-layout--default site-layout--secondary">
         <div className="container">
-          <div className="row"></div>
+          <div className="row">
+            <div className="col-12">
+              <h3 className={styles.sectionTitle}>Lorem ipsum dolor</h3>
+            </div>
+            <ArticleCard col={6} articles={imageArticles} type="image" />
+          </div>
+        </div>
+      </div>
+      <div className="site-layout--default site-layout--primary">
+        <div className="container">
+          <div className="row">
+            <ArticleCard col={3} articles={articleCardsPart2} type="regular" />
+          </div>
         </div>
       </div>
     </main>

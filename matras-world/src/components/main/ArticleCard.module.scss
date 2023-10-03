@@ -1,11 +1,18 @@
-.articleCardContainer {
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+.articleCardContainerRegular,
+.articleCardContainerRelative {
   margin-bottom: 35px;
 
   & .articleCardImg {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px 4px #c6c6c6;
+    box-shadow: 2px 4px 6px #c6c6c6;
+    max-height: 350px;
+    object-fit: cover;
   }
 
   .articleTextWrapper {
@@ -15,11 +22,37 @@
     line-clamp: 7;
     -webkit-box-orient: vertical;
 
+    & .articleCardTitle {
+      margin-bottom: 15px;
+    }
+
     & .articleCardText {
       font-size: 12px;
       opacity: 0.6;
       margin-bottom: 0;
       text-overflow: ellipsis;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.articleCardContainerRelative {
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 15px;
+  }
+
+  .articleTextWrapper {
+    & .articleCardTitle {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #fff;
+      margin-bottom: 10px;
     }
   }
 }

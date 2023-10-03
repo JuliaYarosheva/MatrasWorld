@@ -8,7 +8,7 @@ import "./index.css";
 import ErrorPage from "./components/erroPage/ErrorPage";
 import ArticleDetailPage from "./components/articleDetailPage/ArticleDetailPage";
 import MainContent from "./components/main/MainContent";
-import { getArticles } from "./api/getArticles";
+import { getArticles, getArticle } from "./api";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 const router = createBrowserRouter([
@@ -29,16 +29,23 @@ const router = createBrowserRouter([
       {
         path: "articles/:articleId",
         element: <ArticleDetailPage />,
-        loader: getArticles,
+        loader: getArticle,
         handle: {
           crumb: (data) => {
-            return <Link to="/articles/:articleId">Article number</Link>;
+            return (
+              <Link to={`/articles/${data.id}`}>Article {data && data.id}</Link>
+            );
           },
         },
       },
       {
         path: "/404",
         element: <PageNotFound />,
+        handle: {
+          crumb: (data) => {
+            return <Link to="/404">404</Link>;
+          },
+        },
       },
     ],
   },

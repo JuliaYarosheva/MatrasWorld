@@ -1,24 +1,36 @@
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
 .pageSlider {
   border-radius: 8px;
-}
 
-.sliderItem {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  height: 570px;
-}
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px;
+  }
 
-.sliderItemImg {
-  object-fit: cover;
-  width: inherit;
-  height: inherit;
-}
+  .sliderItem {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 570px;
 
-.sliderItemCation {
-  position: absolute;
-  bottom: 5px;
-  color: #ffffff;
-  font-weight: 600;
-  margin-left: 25px;
+    @include media-breakpoint-down(sm) {
+      height: 250px;
+    }
+
+    .sliderItemImg {
+      object-fit: cover;
+      width: inherit;
+      height: inherit;
+    }
+
+    .sliderItemCation {
+      position: absolute;
+      bottom: 5px;
+      color: #ffffff;
+      font-weight: 600;
+      margin-left: 25px;
+    }
+  }
 }

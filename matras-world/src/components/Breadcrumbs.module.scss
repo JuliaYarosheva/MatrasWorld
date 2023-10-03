@@ -1,0 +1,12 @@
+.breadcrumbsWrapper {
+  display: flex;
+
+  .breadcrumbsItem,
+  .breadcrumbsItemActive {
+    font-size: 13px;
+  }
+
+  .breadcrumbsItemActive {
+    opacity: 0.5;
+  }
+}

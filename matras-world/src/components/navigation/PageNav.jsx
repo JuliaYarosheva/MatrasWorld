@@ -22,7 +22,8 @@ const PageNav = () => {
                         <li
                           key={id}
                           className={
-                            styles.navItem + " nav-item dropdown col-2"
+                            styles.navItem +
+                            " nav-item dropdown col-sm-1 col-lg-2"
                           }
                         >
                           <a
@@ -39,7 +40,11 @@ const PageNav = () => {
                         </li>
                       );
                     })}
-                    <li className={styles.navItem + " nav-item dropdown col-2"}>
+                    <li
+                      className={
+                        styles.navItem + " nav-item dropdown col-sm-1 col-lg-2"
+                      }
+                    >
                       <a href="#" className="nav-link">
                         Info
                       </a>
