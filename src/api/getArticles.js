@@ -2,6 +2,7 @@ import {
   articleCardsPart1,
   articleCardsPart2,
   asideArticleCards,
+  imageArticles,
 } from "../data/articles";
 
 export const getArticles = async () => {
@@ -9,6 +10,7 @@ export const getArticles = async () => {
     ...articleCardsPart1,
     ...articleCardsPart2,
     ...asideArticleCards,
+    ...imageArticles,
   ]);
 
   return { articles };
