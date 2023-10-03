@@ -1,6 +1,7 @@
 import { navCategories } from "../../data/fakeData";
 import PageNavItem from "./PageNavItem";
 import styles from "./PageNav.module.scss";
+import { useId } from "react";
 
 const PageNav = () => {
   return (
@@ -9,15 +10,17 @@ const PageNav = () => {
         <div className="row">
           <div className="col-12">
             <nav className={styles.navbar + " navbar navbar-expand"}>
-              <div class="container-fluid container">
+              <div className="container-fluid container">
                 <div
-                  class="collapse navbar-collapse row"
+                  className="collapse navbar-collapse row"
                   id="navbarNavDarkDropdown"
                 >
                   <ul className="navbar-nav justify-content-center">
                     {navCategories.map((category) => {
+                      const id = useId();
                       return (
                         <li
+                          key={id}
                           className={
                             styles.navItem + " nav-item dropdown col-2"
                           }

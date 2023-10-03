@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import { sliderItems } from "../../data/fakeData";
 import styles from "./PageSlider.module.scss";
+import { useId } from "react";
 
 const PageSlider = () => {
   const settings = {
@@ -17,8 +18,9 @@ const PageSlider = () => {
     <div className={styles.pageSlider}>
       <Slider {...settings}>
         {sliderItems.map((item) => {
+          const id = useId();
           return (
-            <div className={styles.sliderItem}>
+            <div key={id} className={styles.sliderItem}>
               <img
                 className={styles.sliderItemImg}
                 src={item.img}

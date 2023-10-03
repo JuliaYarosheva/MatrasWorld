@@ -1,21 +1,10 @@
-import styles from "./MainContent.module.scss";
-import SearchInput from "../SearchInput";
-import Breadcrumbs from "../Breadcrumbs";
 import ArticleCard from "./ArticleCard";
 import PageSlider from "./PageSlider";
-import { asideArticleCards, articleCards } from "../../data/fakeData";
+import { asideArticleCards, articleCards } from "../../data/articles";
 
 const MainContent = () => {
   return (
     <main>
-      <div className="site-layout--default site-layout--primary">
-        <div className="container">
-          <div className="row">
-            <Breadcrumbs />
-            <SearchInput />
-          </div>
-        </div>
-      </div>
       <div className="site-layout--default site-layout--primary">
         <div className="container">
           <div className="row h-25">

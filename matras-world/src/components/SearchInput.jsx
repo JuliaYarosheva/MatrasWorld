@@ -3,7 +3,7 @@ import Lens from "./svg/Lens";
 
 const SearchInput = () => {
   return (
-    <div className="col-3 offset-6">
+    <div className="col-3 offset-3">
       <form className={styles.searchForm}>
         <input
           className={styles.searchInput}
