@@ -8,13 +8,13 @@ const PageFooter = () => {
       <footer className={styles.pageFooter}>
         <div className="container">
           <div className="row">
-            <div className={styles.logoContainer + " col-sm-12 col-lg-3"}>
+            <div className={styles.logoContainer + " col-sm-12 col-md-3"}>
               <Logo />
             </div>
             <div
               className={
                 styles.footerDetailsContainer +
-                " col-sm-12 col-lg-8 offset-sm-0 offset-lg-1"
+                " col-sm-12 col-md-8 offset-sm-0 offset-md-1"
               }
             >
               <div className="container">

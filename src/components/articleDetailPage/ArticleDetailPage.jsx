@@ -40,7 +40,7 @@ const ArticleDetailPage = () => {
                         <p className={styles.articleDPtext}>{article.text}</p>
                       )}
                     </div>
-                    <div className="col-sm-6 col-lg-2">
+                    <div className="col-sm-6 col-md-2">
                       <button className={styles.articleDPbutton} type="button">
                         Take a test
                       </button>

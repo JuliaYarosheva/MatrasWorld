@@ -8,7 +8,7 @@ const ArticleCard = ({ articles, col = 12, type }) => {
       {articles.map((article, index) => {
         const id = useId();
         return (
-          <div key={id} className={`col-sm-12 col-lg-${col}`}>
+          <div key={id} className={`col-sm-12 col-md-${col}`}>
             <Link key={article.id} to={`articles/${article.id}`}>
               <div
                 className={

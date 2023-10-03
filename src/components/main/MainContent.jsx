@@ -14,10 +14,10 @@ const MainContent = () => {
       <div className="site-layout--default site-layout--primary">
         <div className="container">
           <div className="row">
-            <div className="col-sm-12 col-lg-9">
+            <div className="col-sm-12 col-md-9">
               <PageSlider />
             </div>
-            <div className="col-sm-12 col-lg-3">
+            <div className="col-sm-12 col-md-3">
               <ArticleCard articles={asideArticleCards} type="aside" />
             </div>
           </div>

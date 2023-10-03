@@ -11,7 +11,7 @@ const Breadcrumbs = () => {
     .map((match) => match.handle.crumb(match.data));
 
   return (
-    <div className="col-sm-12 col-lg-6 display-flex align-items-center">
+    <div className="col-sm-12 col-md-6 display-flex align-items-center">
       <ul className={styles.breadcrumbsWrapper}>
         {crumbs.map((crumb, index) => {
           return (
