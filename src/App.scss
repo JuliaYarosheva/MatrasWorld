@@ -61,8 +61,12 @@ body {
   }
 }
 
-.page-logo {
-  width: 120px;
+.page-logo-link {
+  display: flex;
+
+  .page-logo {
+    width: 120px;
+  }
 }
 
 .nav-item {
