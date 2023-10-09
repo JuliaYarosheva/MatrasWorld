@@ -73,6 +73,31 @@ body {
   & > .nav-link {
     padding: 0;
     text-align: center;
+    display: block;
+
+    @include media-breakpoint-down(sm) {
+      padding: 8px 0;
+    }
+  }
+}
+
+.nav-link.dropdown-toggle {
+  &::after {
+    margin-left: 10px;
+    vertical-align: 0px;
+    border: none;
+    content: url(../public/images/down-arrow.svg);
+  }
+
+  & ~ .dropdown-menu {
+    background-color: $gray-100;
+    background-clip: unset;
+    border-radius: 0px;
+    inset: 30px auto auto 20px !important;
+
+    @include media-breakpoint-down(sm) {
+      inset: 0px auto auto 100px !important;
+    }
   }
 }
 
@@ -123,4 +148,48 @@ body {
 
 .slick-slide {
   height: inherit !important;
+}
+
+.bm-burger-button {
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: $gray-700;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+.bm-menu {
+  background: $gray-200;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: $gray-700;
+}
+
+.bm-item {
+  display: inline-block;
+  padding-top: 40px;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
 }

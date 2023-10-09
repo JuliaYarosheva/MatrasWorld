@@ -9,3 +9,19 @@
     padding: 0 5px;
   }
 }
+
+.hamburger {
+  position: relative;
+  padding: 5px 0;
+}
+
+.hamburgerPosition {
+  left: 0px;
+  top: 0px;
+}
+
+.iconStyle {
+  width: 32px;
+  height: 32px;
+  color: $gray-700;
+}
